@@ -4,6 +4,16 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import Checkbox from '@mui/material/Checkbox';
+import EggOutlined from '@mui/icons-material/EggOutlined';
+import Egg from '@mui/icons-material/Egg';
+
+import Groups from '@mui/icons-material/Groups';
+import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+
+
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',
@@ -81,11 +91,17 @@ export default function XP() {
                 {(currentXP.value > 0) && (
                 <div>
                     <br/>
-                    Complete <b>{mathRaids.value}</b> 5 Star Raids <br/>
-                    Evolve <b>{mathEvolve.value}</b> Pokémon<br/>
-                    Hatch <b>{mathEgg.value}</b> 2k Eggs <br/>
-                    Catch <b>{mathCatch.value}</b> Pokémon <br/>
-                    Spin <b>{mathSpin.value}</b> Pokéstops <br/>
+                    Complete <b>{mathRaids.value}</b> 5 Star Raids  
+                        <Checkbox {...label} icon={<EggOutlined />} checkedIcon={<Egg />} /><br/>
+                    Evolve <b>{mathEvolve.value}</b> Pokémon
+                        <Checkbox {...label} icon={<EggOutlined />} checkedIcon={<Egg />} />
+                        <Checkbox {...label} icon={<GroupsOutlinedIcon />} checkedIcon={<Groups />} /> <br/>
+                    Hatch <b>{mathEgg.value}</b> 2k Eggs 
+                        <Checkbox {...label} icon={<EggOutlined />} checkedIcon={<Egg />} /><br/>
+                    Catch <b>{mathCatch.value}</b> Pokémon 
+                        <Checkbox {...label} icon={<EggOutlined />} checkedIcon={<Egg />} /><br/>
+                    Spin <b>{mathSpin.value}</b> Pokéstops 
+                        <Checkbox {...label} icon={<EggOutlined />} checkedIcon={<Egg />} /><br/>
                 </div>
                 )}
 
